@@ -151,7 +151,7 @@ class AdminService:
             
             # 判断是否开始新对话块
             if (last_timestamp and 
-                (msg.timestamp - last_timestamp) > window_seconds * 1000):
+                (msg.timestamp - last_timestamp) > window_seconds):
                 # 保存当前块
                 if current_block['messages']:
                     blocks.append(self._finalize_block(current_block))
